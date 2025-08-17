@@ -1,0 +1,156 @@
+ID scenariusza: TST-01  
+Nazwa: Rejestracja nowego użytkownika  
+Opis: Sprawdzenie możliwości zarejestrowania nowego użytkownika z losowymi danymi.  
+Kroki do wykonania:  
+1. Przejdź do strony głównej.  
+2. Kliknij przycisk „Rejestracja”.  
+3. Wypełnij wszystkie wymagane pola danymi testowymi.  
+4. Kliknij przycisk „Załóż nowe konto”.  
+Oczekiwany rezultat: Użytkownik zostaje przekierowany na stronę główną i jest zalogowany.  
+Rezultat końcowy: ✅ Test 1 sukces: Rejestracja zakończona pomyślnie. Użytkownik został przekierowany na stronę główną.
+
+ID scenariusza: TST-02  
+Nazwa: Logowanie istniejącego użytkownika  
+Opis: Sprawdzenie logowania na konto utworzone wcześniej.  
+Kroki do wykonania:  
+1. Przejdź do strony logowania.  
+2. Wprowadź poprawne dane logowania.  
+3. Kliknij przycisk „Zaloguj”.  
+Oczekiwany rezultat: Użytkownik zostaje zalogowany i przekierowany na stronę główną.  
+Rezultat końcowy: ✅ Test 2 sukces: Logowanie zakończone pomyślnie. Użytkownik został przekierowany na stronę główną.
+
+ID scenariusza: TST-03  
+Nazwa: Dodanie produktu do koszyka  
+Opis: Sprawdzenie możliwości dodania produktu do koszyka po zalogowaniu.  
+Kroki do wykonania:  
+1. Zaloguj się.  
+2. Przejdź do kategorii „Koszulki patriotyczne”.  
+3. Wybierz produkt i rozmiar.  
+4. Dodaj do koszyka.  
+5. Przejdź do koszyka.  
+Oczekiwany rezultat: Produkt widoczny w koszyku.  
+Rezultat końcowy: ✅ Test 3 sukces: Produkt został pomyślnie dodany do koszyka.
+
+ID scenariusza: TST-04  
+Nazwa: Wyszukiwanie produktu  
+Opis: Sprawdzenie funkcji wyszukiwania produktu po nazwie.  
+Kroki do wykonania:  
+1. Na stronie głównej wpisz frazę „Koszulka Śmierć Konfidentom 60”.  
+2. Kliknij ikonę wyszukiwania.  
+Oczekiwany rezultat: Zostaje wyświetlona strona z wynikami wyszukiwania.  
+Rezultat końcowy: ✅ Test 4 sukces: Produkt został pomyślnie wyszukany.
+
+ID scenariusza: TST-05  
+Nazwa: Logowanie z błędnymi danymi  
+Opis: Sprawdzenie walidacji danych logowania (nieistniejące konto).  
+Kroki do wykonania:  
+1. Przejdź do strony logowania.  
+2. Wprowadź nieprawidłowe dane (login i hasło).  
+3. Kliknij „Zaloguj”.  
+Oczekiwany rezultat: Użytkownik nie zostaje zalogowany, pozostaje na stronie logowania.  
+Rezultat końcowy: ✅ Test 5 sukces: Logowanie zostało poprawnie odrzucone dla nieistniejącego konta.
+
+ID scenariusza: TST-06  
+Nazwa: Dodanie produktu do koszyka bez logowania  
+Opis: Sprawdzenie, czy użytkownik niezalogowany może dodać produkt do koszyka.  
+Kroki do wykonania:  
+1. Przejdź do strony produktu.  
+2. Wybierz rozmiar.  
+3. Kliknij „Dodaj do koszyka”.  
+4. Spróbuj przejść do koszyka.  
+Oczekiwany rezultat: Dodanie produktu jest zablokowane lub kończy się niepowodzeniem.  
+Rezultat końcowy: ❌ Test 6 niepowodzenie: Produkt został dodany do koszyka pomimo braku logowania.
+
+ID scenariusza: TST-07  
+Nazwa: Wylogowanie użytkownika  
+Opis: Sprawdzenie poprawności procesu wylogowania.  
+Kroki do wykonania:  
+1. Zaloguj się na konto.  
+2. Kliknij ikonę konta i wybierz „Wyloguj się”.  
+Oczekiwany rezultat: Użytkownik zostaje wylogowany i przekierowany na stronę „logout”.  
+Rezultat końcowy: ✅ Test 7 sukces: Wylogowanie zakończone pomyślnie.
+
+ID scenariusza: TST-08  
+Nazwa: Sortowanie produktów po cenie rosnąco  
+Opis: Sprawdzenie sortowania produktów według ceny (rosnąco).  
+Kroki do wykonania:  
+1. Przejdź do kategorii „Odzież uliczna”.  
+2. Wybierz sortowanie „Cena od najniższej”.  
+Oczekiwany rezultat: Produkty są posortowane rosnąco według ceny.  
+Rezultat końcowy: ✅ Test 8 sukces: Produkty zostały posortowane rosnąco po cenie.
+
+ID scenariusza: TST-09  
+Nazwa: Wprowadzenie ujemnej liczby produktów w koszyku  
+Opis: Sprawdzenie walidacji przy edycji ilości w koszyku.  
+Kroki do wykonania:  
+1. Dodaj produkt do koszyka.  
+2. Wprowadź ilość „-1”.  
+3. Kliknij „Aktualizuj koszyk”.  
+Oczekiwany rezultat: System nie akceptuje wartości ujemnych, przekierowuje do edycji koszyka.  
+Rezultat końcowy: ❌ Test 9 niepowodzenie: System zaakceptował niepoprawną ilość produktu.
+
+ID scenariusza: TST-10  
+Nazwa: Wprowadzenie bardzo dużej ilości produktu  
+Opis: Sprawdzenie limitu maksymalnej ilości produktu.  
+Kroki do wykonania:  
+1. Dodaj produkt do koszyka.  
+2. Wprowadź bardzo dużą ilość (np. 7500000000000000000).  
+3. Kliknij „Aktualizuj koszyk”.  
+Oczekiwany rezultat: System nie akceptuje wartości, brak zmiany strony.  
+Rezultat końcowy: ❌ Test 10 niepowodzenie: System zaakceptował nieprawidłową ilość i przekierował do edycji.
+
+ID scenariusza: TST-11  
+Nazwa: Wybór paczkomatu i przejście do danych użytkownika  
+Opis: Sprawdzenie czy po wyborze metody dostawy można przejść do danych wysyłkowych.  
+Kroki do wykonania:  
+1. Zaloguj się.  
+2. Dodaj produkt do koszyka.  
+3. Wybierz dostawę paczkomatem.  
+4. Przejdź dalej.  
+Oczekiwany rezultat: Użytkownik zostaje przekierowany do formularza danych wysyłkowych.  
+Rezultat końcowy: ✅ Test 11 sukces: Przejście do danych użytkownika po wyborze paczkomatu zakończone sukcesem.
+
+ID scenariusza: TST-12  
+Nazwa: Dodanie produktu do koszyka i przejście do danych użytkownika  
+Opis: Sprawdzenie, czy po dodaniu produktu do koszyka możliwe jest przejście do formularza danych wysyłkowych.  
+Kroki do wykonania:  
+1. Zaloguj się na konto użytkownika.  
+2. Przejdź na stronę produktu: "Koszulka Śmierć Konfidentom".  
+3. Wybierz rozmiar L.  
+4. Dodaj produkt do koszyka.  
+5. Kliknij "Przejdź do koszyka".  
+6. Kliknij przycisk "Dane do wysyłki".  
+Oczekiwany rezultat: Użytkownik zostaje przekierowany do formularza danych wysyłkowych (/user?ref=basket).  
+Rezultat końcowy: ❌ Test 12 niepowodzenie: Nie udało się przejść do danych użytkownika po dodaniu produktu do koszyka.
+
+ID scenariusza: TST-13  
+Nazwa: Przekierowanie z koszyka na stronę główną  
+Opis: Sprawdzenie, czy użytkownik może opuścić stronę koszyka i wrócić na stronę główną sklepu.  
+Kroki do wykonania:  
+1. Przejdź na stronę koszyka.  
+2. Kliknij "Strona główna".  
+3. Kliknij w dowolny element nawigacyjny, np. pasek "Szukaj... kategoria Odzież".  
+Oczekiwany rezultat: Użytkownik zostaje przekierowany na stronę główną sklepu.  
+Rezultat końcowy: ✅ Test 13 sukces: Użytkownik został przekierowany na stronę główną.
+
+ID scenariusza: TST-14  
+Nazwa: Rejestracja z pustym formularzem  
+Opis: Sprawdzenie zachowania systemu przy próbie rejestracji bez wypełnienia wymaganych pól.  
+Kroki do wykonania:  
+1. Otwórz stronę główną.  
+2. Kliknij ikonę profilu i wybierz "Rejestracja".  
+3. Pozostaw wszystkie pola formularza puste.  
+4. Kliknij przycisk "Załóż nowe konto".  
+Oczekiwany rezultat: Rejestracja nie zostaje przeprowadzona, a użytkownik jest przekierowany na stronę główną sklepu.  
+Rezultat końcowy: ❌ Test 14 niepowodzenie: Użytkownik pozostał na stronie konta po próbie rejestracji bez danych.
+
+ID scenariusza: TST-15  
+Nazwa: Rejestracja już istniejącego konta z poprawnymi danymi  
+Opis: Sprawdzenie, czy możliwa jest prawidłowa rejestracja nowego konta użytkownika z tymi samymi danymi jak konto już istniejące.  
+Kroki do wykonania:  
+1. Otwórz stronę główną.  
+2. Kliknij ikonę profilu i wybierz "Rejestracja".  
+3. Wypełnij formularz rejestracyjny poprawnymi danymi.  
+4. Kliknij przycisk "Załóż nowe konto".  
+Oczekiwany rezultat: Użytkownik zostaje zarejestrowany i przekierowany na stronę główną sklepu.  
+Rezultat końcowy: ❌ Test 15 niepowodzenie: Użytkownik pozostał na stronie konta po prawidłowej rejestracji.
